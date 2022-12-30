@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- font awesome -->
+        <!-- link taken from font awesome cdn, icon from font awesome icons. "x" icon  -->
+        <link
+            rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
+
+        <!-- google fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+            rel="stylesheet"
+        />
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="add-project-con">
+            <button onclick = "buttonFunction()" id="add-project"> Add Project </button>
+        </div>
+
+    <!-- display project of question here -->
+        <div id="project-con">
+            <div class="project-list-container"></div>
+        </div>
+    </div>
+
+    <form>
+        <div>
+            <!-- div makes the elements appear on seperate lines -->
+            <!-- label allows you to click on the text in html page and select the box -->
+            <label for="projectName"> Project Name:</label>
+            <input type="text" id="projectName" placeholder="project name..." required> 
+        </div> 
+
+        <br>
+        <!-- adds a line space between the elements -->
+        
+        <div>
+            <label for="projectText"> Project Text:</label>
+            <input type="text" id="projectText" placeholder="project description..." required> 
+        </div>
+
+        <br>
+
+        <div>
+            <!-- premade html submit button -->
+            <input type="submit" id="submitButton">
+            <ul id="projectList"></ul>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
