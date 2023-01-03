@@ -4,6 +4,8 @@ body{
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto";
+    margin-left: 20%;
+    margin-right: 20%
 }
 body{
     background-color: #ffffff;
@@ -55,9 +57,10 @@ body{
 }
 .headerContainer {
     /* padding: 10px 10%;  */
-    margin-left: 10%;
-    margin-right: 10%
+    /* margin-left: 10%;
+    margin-right: 10% */
         /* top and bottom, left and right */
+    padding-bottom: 50px;
 }
 .portfolioLogo {
     font-size:30px;
@@ -74,13 +77,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    /* margin-right: 10%; */
     /* background-color: #8B0000; */
-    margin-right: 10%;
 }
 nav ul li {
     display:inline-block;
     list-style: none;
     margin: 10px 10px;
+    /* adds a margin between each element */
 }
 nav ul li a {
     /* this is for each list element: a tag */
@@ -110,13 +114,39 @@ nav ul li a:hover::after {
 .displayed-card {
     margin: auto;
     width: 90vw;
-    max-width: 30em;
+    max-width: 20em;
+    height: 30em;
+    max-height: 30em;
     background-color:#8B0000;
     border-radius: 1em;
+    box-shadow: 0 5px 5px rgba(53, 1, 1, 0.5);
+    text-align: center;
+    padding-top: 4em;
+}
+#card-name {
+    display: inline-block;
+    /* inline-block enables the object to be centered within another object */
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+#card-text {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    display: none;
+    /* padding-top: 25px; padding does not work as it is to the objects border, not to the other*/
+}
+#card-button-container {
+    margin: auto;
+    width: 7vw;
+    /* need width for margin to dunction */
 }
 #display-card-button {
     /* display: inline-block; */
     /* margin: 0 auto; */
+    position: absolute;
     padding: 10px;
     background-color: #ffffff;
     
@@ -147,7 +177,6 @@ nav ul li a:hover::after {
     max-width: 20em;
     max-height: 25em;
     border-radius: 0.4em;
-    box-shadow: 0 5px 5px rgba(53, 1, 1, 0.5);
 }
 .show-hide-button {
     color: #ffffff;
@@ -157,10 +186,3 @@ nav ul li a:hover::after {
 .hide { 
     display: none;
 }
-
-
-
-
-
-
-
