@@ -1,5 +1,27 @@
-let projects = []; // array that holds card objects
+let projects = [
+    {
+        id: 0,
+        name: '¿Tú qué crees?',
+        text: 'What do you believe?'
+    },
+    {
+        id: 1,
+        name: 'En mi opinión...',
+        text: 'In my opinion...'
+    },
+    {
+        id: 2,
+        name: 'Desde mi punto de vista...',
+        text: 'From my point of view...'
+    },
+    {
+        id: 3,
+        name: 'Creo que deberías...',
+        text: 'I think you ought to'
+    }
+]; // array that holds card objects
 
+// webpage will stop working an element in incorrectly defined
 let btnAdd = document.getElementById("submitButton");
 let nameInput = document.getElementById("projectName");
 let textInput = document.getElementById("projectText");
@@ -8,8 +30,9 @@ let displayCards = document.getElementById("display-card-button");
 let cardGrid = document.getElementsByClassName("card-grid")[0]; // class name needs [0] for some reason
 let projectForm = document.getElementById("projectForm");
 let displayCardArea = document.getElementsByClassName("display-cards")[0];
+let quizCard = document.getElementsByClassName("displayed-card")[0];
 let editBool = false;
-cardId = 0;
+cardId = 4;
 
 
 btnAdd.addEventListener('click', () => { 
@@ -30,16 +53,33 @@ btnAdd.addEventListener('click', () => {
     // fix so that Ids are changed when a card is deleted. Create a method almost like the ArrayList class
     // project.length is also being reached before the final card is found. Perhaps use the largest id rather than projects.length
 var pos = 0;
-var cardName = document.querySelector('#card-name'); 
+var cardName = document.getElementById('card-name'); 
 var cardText = document.querySelector('#card-text');
+// var cardContainer = document.getElementById('displaying-card');
 displayCards.addEventListener('click', () => {
-    cardName.textContent = "Card Name: " + projects[pos].name;
-    cardText.textContent = "Card Text: " + projects[pos].text;
+    cardName.textContent = projects[pos].name;
+    cardText.textContent = projects[pos].text;
     pos++;
     if(pos >= projects.length) {
         pos = 0;
     }
 })
+// show/hide quiz card answers
+quizCard.addEventListener("click", () => {
+    // cardContainer.classList.toggle("hide");
+    if (isvisible(cardName) && !isvisible(cardText)) {
+        cardName.style.display = "none";
+        cardText.style.display = "inline";
+        console.log("hidden")
+    } else if(!isvisible(cardName) && isvisible(cardText)) {
+        cardName.style.display = "inline";
+        cardText.style.display = "none";
+        console.log("visible")
+    }
+})
+function isvisible(obj) {
+    return obj.offsetWidth > 0 && obj.offsetHeight > 0;
+}
 
 // card grid functionality. The for each loop makes it so the cards index does not need to be tracked in order to edit the card or delete
 function showGrid() {
