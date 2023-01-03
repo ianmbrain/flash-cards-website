@@ -1,4 +1,5 @@
 body{
+    /* padding is used to add space around the objects */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,12 +8,17 @@ body{
 body{
     background-color: #ffffff;
 }
-.container {
+#projectForm {
+    /* margin-left: 10%;  */
+    text-align: center;
+}
+.project-container {
     width: 90vw;
     max-width: 62.5em;
     /* border: 1px solid black; - adds boarder around the container*/
     position: relative;
     margin: auto;
+    /* margin auto makes the container center on the screen */
 }
 .add-project-con {
     display: flex;
@@ -44,6 +50,117 @@ body{
 }
 .objectDiv {
     background-color: #8B0000;
-    color:#ffffff;
+    color:#ffffff; 
     margin-bottom: 1vh;
 }
+.headerContainer {
+    /* padding: 10px 10%;  */
+    margin-left: 10%;
+    margin-right: 10%
+        /* top and bottom, left and right */
+}
+.portfolioLogo {
+    font-size:30px;
+    color:#ffffff;
+}
+.logoContainer {
+    background-color:#8B0000;
+    font-weight: 1000;
+    border-radius:2em;
+    padding: 0px 10px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* background-color: #8B0000; */
+    margin-right: 10%;
+}
+nav ul li {
+    display:inline-block;
+    list-style: none;
+    margin: 10px 10px;
+}
+nav ul li a {
+    /* this is for each list element: a tag */
+    color: #000000;
+    /* no underline */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+/* to create the hover effect */
+nav ul li a::after {
+    content:"";
+    width: 0;
+    height: 3px;
+    background-color: #8B0000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    /* transition makes the line appear slowly */
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    /* width of the line after hovering makes it appear */
+    width: 100%
+}
+.displayed-card {
+    margin: auto;
+    width: 90vw;
+    max-width: 30em;
+    background-color:#8B0000;
+    border-radius: 1em;
+}
+#display-card-button {
+    /* display: inline-block; */
+    /* margin: 0 auto; */
+    padding: 10px;
+    background-color: #ffffff;
+    
+}
+#displaying-card {
+    /* margin: 0 auto; */
+    margin: 5% 5%;
+    color: #ffffff;
+    font-weight: bold;
+    padding-bottom: 1em;
+    /*  space at the bottom of the card */
+}
+#projectName {
+    margin-right: 12px;
+}
+.card-grid {
+    margin: auto;
+    max-width: 60em;
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-card-shown {
+    background-color:#8B0000;
+    /* padding-bottom: 1em; */
+    padding: 1em;
+    color: #ffffff;
+    max-width: 20em;
+    max-height: 25em;
+    border-radius: 0.4em;
+    box-shadow: 0 5px 5px rgba(53, 1, 1, 0.5);
+}
+.show-hide-button {
+    color: #ffffff;
+    font-weight: bold;
+}
+/* allows for elements to be hidden */
+.hide { 
+    display: none;
+}
+
+
+
+
+
+
+
