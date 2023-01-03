@@ -22,7 +22,6 @@
 </head>
 
 <body>
-
     <!-- header buttons -->
     <!-- these should be <section> rather than <div> -->
     <section class="header"> 
@@ -40,7 +39,7 @@
                 </ul>
             </nav>
         </div>
-    </div>
+    </section>
 
     <!-- form to input and sumbit cards -->
     <form id="projectForm">
@@ -70,9 +69,13 @@
 
     <!-- quiz -->
     <section class="display-cards" >
-        <div class="displayed-card">
+        <div id="card-button-container">
             <button id="display-card-button"> Display Card </button>
-            <div id="displaying-card">
+        </div>
+        <div class="displayed-card" href=#>
+            <div id="displaying-card"> 
+            <!-- had class="hide" -->
+                
                 <p id="card-name"></p>
                 <p id="card-text"></p>
             </div>
